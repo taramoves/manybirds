@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initProjectCards();
     initBackButtons();
     initSmoothScroll();
+    initLightbox();
 });
 
 /**
@@ -325,6 +326,59 @@ function initCursorEffect() {
     interactiveElements.forEach(el => {
         el.addEventListener('mouseenter', () => cursor.classList.add('cursor-grow'));
         el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-grow'));
+    });
+}
+
+/**
+ * Lightbox
+ * - Click gallery images to view larger
+ */
+function initLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const galleryItems = document.querySelectorAll('.gallery-item img');
+    
+    if (!lightbox || !lightboxImg) return;
+    
+    // Open lightbox when clicking gallery images
+    galleryItems.forEach(img => {
+        img.addEventListener('click', (e) => {
+            e.stopPropagation();
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    // Close lightbox
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    // Close on background click
+    lightbox.addEventListener('click', closeLightbox);
+    
+    // Close on X button click
+    if (lightboxClose) {
+        lightboxClose.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeLightbox();
+        });
+    }
+    
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
+    
+    // Prevent closing when clicking the image itself
+    lightboxImg.addEventListener('click', (e) => {
+        e.stopPropagation();
     });
 }
 
