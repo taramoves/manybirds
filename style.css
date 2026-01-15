@@ -478,16 +478,8 @@ body {
 
 /* Placeholder backgrounds */
 .undersky-bg {
-    background: linear-gradient(135deg, #1a1520 0%, #2d1f35 30%, #1a2530 70%, #0f1a20 100%);
+    background: url('assets/projects/undersky/still-1.png') center center / cover no-repeat;
     position: relative;
-}
-
-.undersky-bg::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 30% 40%, rgba(180, 140, 200, 0.2) 0%, transparent 50%),
-                radial-gradient(ellipse at 70% 60%, rgba(100, 150, 180, 0.15) 0%, transparent 40%);
 }
 
 .flicker-bg,
