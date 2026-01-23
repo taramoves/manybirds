@@ -332,30 +332,98 @@ function initCursorEffect() {
 /**
  * Lightbox
  * - Click gallery images to view larger
+ * - Navigate between images with arrows
  */
 function initLightbox() {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxClose = document.getElementById('lightbox-close');
-    const galleryItems = document.querySelectorAll('.gallery-item img');
+    const lightboxPrev = document.getElementById('lightbox-prev');
+    const lightboxNext = document.getElementById('lightbox-next');
     
     if (!lightbox || !lightboxImg) return;
     
+    // Track current gallery and index
+    let currentGallery = [];
+    let currentIndex = 0;
+    
     // Open lightbox when clicking gallery images
-    galleryItems.forEach(img => {
-        img.addEventListener('click', (e) => {
-            e.stopPropagation();
-            lightboxImg.src = img.src;
-            lightboxImg.alt = img.alt;
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
+    document.addEventListener('click', (e) => {
+        const img = e.target.closest('.gallery-item img');
+        if (!img) return;
+        
+        e.stopPropagation();
+        
+        // Find the parent gallery and get all images in it
+        const gallery = img.closest('.gallery-grid');
+        if (gallery) {
+            currentGallery = Array.from(gallery.querySelectorAll('.gallery-item img'));
+            currentIndex = currentGallery.indexOf(img);
+        } else {
+            currentGallery = [img];
+            currentIndex = 0;
+        }
+        
+        showImage(currentIndex);
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        updateNavVisibility();
     });
+    
+    // Show image at index
+    function showImage(index) {
+        if (currentGallery[index]) {
+            lightboxImg.src = currentGallery[index].src;
+            lightboxImg.alt = currentGallery[index].alt;
+        }
+    }
+    
+    // Update nav button visibility
+    function updateNavVisibility() {
+        if (currentGallery.length <= 1) {
+            if (lightboxPrev) lightboxPrev.style.display = 'none';
+            if (lightboxNext) lightboxNext.style.display = 'none';
+        } else {
+            if (lightboxPrev) lightboxPrev.style.display = '';
+            if (lightboxNext) lightboxNext.style.display = '';
+        }
+    }
+    
+    // Navigate to previous image
+    function showPrev() {
+        if (currentGallery.length <= 1) return;
+        currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+        showImage(currentIndex);
+    }
+    
+    // Navigate to next image
+    function showNext() {
+        if (currentGallery.length <= 1) return;
+        currentIndex = (currentIndex + 1) % currentGallery.length;
+        showImage(currentIndex);
+    }
     
     // Close lightbox
     function closeLightbox() {
         lightbox.classList.remove('active');
         document.body.style.overflow = '';
+        currentGallery = [];
+        currentIndex = 0;
+    }
+    
+    // Navigation button clicks
+    if (lightboxPrev) {
+        lightboxPrev.addEventListener('click', (e) => {
+            e.stopPropagation();
+            showPrev();
+        });
+    }
+    
+    if (lightboxNext) {
+        lightboxNext.addEventListener('click', (e) => {
+            e.stopPropagation();
+            showNext();
+        });
     }
     
     // Close on background click
@@ -369,10 +437,16 @@ function initLightbox() {
         });
     }
     
-    // Close on Escape key
+    // Keyboard navigation
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        if (!lightbox.classList.contains('active')) return;
+        
+        if (e.key === 'Escape') {
             closeLightbox();
+        } else if (e.key === 'ArrowLeft') {
+            showPrev();
+        } else if (e.key === 'ArrowRight') {
+            showNext();
         }
     });
     
