@@ -816,6 +816,40 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+.practice-block p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.9;
+}
+
+.member-links {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+}
+
+.member-links a {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color var(--duration-fast) var(--ease-out);
+}
+
+.member-links a:hover {
+    color: var(--accent-warm);
+}
+
+.about-availability {
+    padding-top: var(--space-lg);
+    text-align: center;
+}
+
+.about-availability p {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: var(--text-secondary);
+}
+
 /* ================================
    Contact Section
    ================================ */
