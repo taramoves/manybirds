@@ -5,13 +5,62 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize all modules
+    initFloatingBirds();
     initNavigation();
     initScrollAnimations();
     initProjectCards();
-    initBackButtons();
     initSmoothScroll();
     initLightbox();
 });
+
+/**
+ * Floating Birds
+ * - Evenly spread birds across the viewport with random jitter
+ * - New random layout on each page load
+ */
+function initFloatingBirds() {
+    const birds = document.querySelectorAll('.floating-bird');
+    if (!birds.length) return;
+
+    // Even grid: 5 columns × 3 rows (15 cells)
+    const cols = 5;
+    const rows = 3;
+    const positions = [];
+    for (let row = 0; row < rows; row++) {
+        for (let col = 0; col < cols; col++) {
+            const left = (col + 0.5) / cols * 100;
+            const top = (row + 0.5) / rows * 100;
+            positions.push({ left, top });
+        }
+    }
+
+    // Shuffle positions (Fisher–Yates)
+    for (let i = positions.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [positions[i], positions[j]] = [positions[j], positions[i]];
+    }
+
+    const jitter = 8;  // ±8% random offset from grid center
+    const minWidth = 180;
+    const maxWidth = 360;
+
+    birds.forEach((bird, i) => {
+        const pos = positions[i % positions.length];
+        const left = pos.left + (Math.random() - 0.5) * 2 * jitter;
+        const top = pos.top + (Math.random() - 0.5) * 2 * jitter;
+        const width = Math.round(minWidth + Math.random() * (maxWidth - minWidth));
+        const duration = 25 + Math.floor(Math.random() * 11);
+        const delay = -(Math.random() * 25);
+
+        bird.style.left = `${left}%`;
+        bird.style.top = `${top}%`;
+        bird.style.right = 'auto';
+        bird.style.bottom = 'auto';
+        bird.style.width = `${width}px`;
+        bird.style.animationDuration = `${duration}s`;
+        bird.style.animationDelay = `${delay}s`;
+    });
+}
 
 /**
  * Navigation
@@ -169,6 +218,7 @@ function initProjectCards() {
                 });
                 targetSection.style.display = 'block';
                 targetSection.classList.add('active', 'visible');
+                document.body.classList.add('project-open');
             }
         } else {
             // Show main site
@@ -185,33 +235,9 @@ function initProjectCards() {
             if (birdMarquee) birdMarquee.style.display = 'none';
             targetSection.style.display = 'block';
             targetSection.classList.add('active', 'visible');
+            document.body.classList.add('project-open');
         }
     }
-}
-
-/**
- * Back Buttons
- * - Return from project detail to main site
- */
-function initBackButtons() {
-    const backButtons = document.querySelectorAll('.back-btn');
-    
-    backButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            showMainSite();
-            
-            // Navigate to projects section
-            const targetId = btn.dataset.back || 'projects';
-            history.pushState(null, '', `#${targetId}`);
-            
-            setTimeout(() => {
-                const targetSection = document.getElementById(targetId);
-                if (targetSection) {
-                    targetSection.scrollIntoView({ behavior: 'smooth' });
-                }
-            }, 100);
-        });
-    });
 }
 
 /**
@@ -223,6 +249,8 @@ function showMainSite() {
     const projectSections = document.querySelectorAll('.section-project-detail');
     const birdMarquee = document.querySelector('.bird-marquee');
     
+    document.body.classList.remove('project-open');
+
     // Hide all project details
     projectSections.forEach(section => {
         section.classList.remove('active', 'visible');
