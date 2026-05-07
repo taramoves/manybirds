@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — MANYBIRDS</title>
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html">
+            <img class="brand-logo" src="assets/logo.svg" alt="" decoding="async">
+            <span class="brand-text">MANYBIRDS</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+            <a href="projects.html" class="is-active">Projects</a>
+            <a href="info.html">Info</a>
+            <a href="shop.html" class="is-nav-hidden">Shop</a>
+            <a href="photos.html" class="is-nav-hidden">Photos</a>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <div class="projects-layout">
+            <aside class="project-index" aria-label="Project list">
+                <ul>
+                    <li>
+                        <button type="button" data-project="undersky">UNDERSKY</button>
+                    </li>
+                    <li>
+                        <button type="button" data-project="birdworld">BIRDWORLD</button>
+                    </li>
+                    <li>
+                        <button type="button" data-project="flicker">Flicker and Gambol</button>
+                    </li>
+                </ul>
+                <button type="button" class="project-index-back" id="project-index-back" hidden>
+                    Back to all projects
+                </button>
+            </aside>
+
+            <div class="project-stage" id="project-stage">
+                <div class="project-hub" id="project-hub">
+                    <div class="project-panel-inner">
+                        <div class="project-panel-head">
+                            <h2>PROJECTS</h2>
+                        </div>
+                        <div class="projects-hero" aria-label="Project previews">
+                            <a href="#undersky" class="projects-hero-card">
+                                <img src="assets/projects/undersky/still-1.png" alt="UNDERSKY — preview still">
+                            </a>
+                            <a href="#birdworld" class="projects-hero-card">
+                                <img src="assets/projects/birdworld/birdworld-1.png" alt="BIRDWORLD — preview still">
+                            </a>
+                            <a href="#flicker" class="projects-hero-card">
+                                <img src="assets/projects/flicker/still-1.png" alt="Flicker and Gambol — preview still">
+                            </a>
+                        </div>
+                        <ul class="shows-list" id="project-hub-list" aria-label="All screenings by project"></ul>
+                    </div>
+                </div>
+
+                <article class="project-panel" id="panel-undersky" data-project="undersky">
+                    <div class="project-panel-inner">
+                        <div class="project-panel-head">
+                            <h2>UNDERSKY</h2>
+                            <p class="project-meta-line">Installation &amp; performance · 2026</p>
+                        </div>
+
+                        <div class="gallery-stack">
+                            <div class="gallery-stack-title">Stills</div>
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="assets/projects/undersky/still-1.png" alt="UNDERSKY still">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="assets/projects/undersky/still-2.png" alt="UNDERSKY still">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="assets/projects/undersky/still-3.png" alt="UNDERSKY still">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-body-text">
+                            <p>UNDERSKY is a future-historical immersive installation of Earth’s oceanic flora and fauna long after humanity has departed for the stars. Created using public-domain scientific illustrations brought back to life in reconstructed ecologies, the work stages mediated nature in the face of ecological loss, situated within immersive art’s legacy of scientific spectacle.</p>
+                        </div>
+
+                        <div class="block-label">PRESENTATIONS</div>
+                        <ul class="shows-list" aria-label="Upcoming and past shows">
+                            <li><span class="show-date">05/29/2026 – 05/30/2026</span> OCEAN WEEK CANADA @ CASERNE 26 (QC, CA)</li>
+                            <li><span class="show-date">05/23/2026</span> CHARLES STREET VIDEO (ON, CA)</li>
+                        </ul>
+
+                        <div class="block-label">Credits</div>
+                        <ul class="credits-list">
+                            <li><span class="credit-name">Tara Rose Morris</span><span class="credit-role">Visuals &amp; system design</span></li>
+                            <li><span class="credit-name">Graham Steinman</span><span class="credit-role">Composition &amp; sound</span></li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="project-panel" id="panel-birdworld" data-project="birdworld">
+                    <div class="project-panel-inner">
+                        <div class="project-panel-head">
+                            <h2>BIRDWORLD</h2>
+                            <p class="project-meta-line">Participatory installation · 2026</p>
+                        </div>
+
+                        <div class="gallery-stack">
+                            <div class="gallery-stack-title">Stills</div>
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="assets/projects/birdworld/birdworld-1.png" alt="BIRDWORLD still">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="assets/projects/birdworld/birdworld-2.png" alt="BIRDWORLD still">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="assets/projects/birdworld/birdworld-3.png" alt="BIRDWORLD still">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-body-text">
+                            <p>BIRDWORLD is a participatory installation of birds migrating across a digital sky.</p>
+                            <p>As visitors draw their birds, each bird joins a growing flock. Over time the screen fills with hundreds of unique birds, forming an ecology shaped by the creativity of the audience.</p>
+                            <p>The project explores themes of collective authorship, playful participation, and the joy of observing a shared world. It draws visitor attention and increases lingerability.</p>
+                        </div>
+
+                        <div class="block-label">PRESENTATIONS</div>
+                        <ul class="shows-list" aria-label="Upcoming and past shows">
+                            <li><span class="show-date">03/07/2026 – 03/08/2026</span> CHARLES STREET VIDEO (ON, CA)</li>
+                        </ul>
+
+                        <div class="block-label">Credits</div>
+                        <ul class="credits-list">
+                            <li><span class="credit-name">Tara Rose Morris</span><span class="credit-role">Visuals &amp; interaction</span></li>
+                            <li><span class="credit-name">Graham Steinman</span><span class="credit-role">Sound</span></li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="project-panel" id="panel-flicker" data-project="flicker">
+                    <div class="project-panel-inner">
+                        <div class="project-panel-head">
+                            <h2>Flicker and Gambol</h2>
+                            <p class="project-meta-line">Fulldome film · 2025</p>
+                        </div>
+
+                        <div class="gallery-stack">
+                            <div class="gallery-stack-title">Stills</div>
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="assets/projects/flicker/still-1.png" alt="Flicker and Gambol still">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="assets/projects/flicker/still-2.png" alt="Flicker and Gambol still">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="assets/projects/flicker/still-3.png" alt="Flicker and Gambol still">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-body-text">
+                            <p>Onwards and upwards. Unmask, unwind, untether. Dance as the sun and the moon go by.</p>
+                        </div>
+
+                        <div class="block-label">Watch</div>
+                        <div class="media-embed">
+                            <iframe width="100%" height="400" src="https://www.youtube.com/embed/jxUHhZvjl08" title="Flicker and Gambol" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="block-label">PRESENTATIONS</div>
+                        <ul class="shows-list" aria-label="Upcoming and past shows">
+                            <li><span class="show-date">01/31/2026</span> DOME UNDER FILM FESTIVAL (MELBOURNE, AUSTRALIA)</li>
+                            <li><span class="show-date">03/28/2026</span> SAT FEST (MONTREAL, QC, CANADA)</li>
+                            <li><span class="show-date">04/10/2026</span> FULLDOME FESTIVAL MONTEVIDEO (MONTEVIDEO, URUGUAY)</li>
+                            <li><span class="show-date">07/15/2026</span> FULLDOME FESTIVAL JENA (JENA, GERMANY)</li>
+                        </ul>
+
+                        <div class="block-label">Credits</div>
+                        <ul class="credits-list">
+                            <li><span class="credit-name">Tara Rose Morris</span><span class="credit-role">Visuals</span></li>
+                            <li><span class="credit-name">Graham Steinman</span><span class="credit-role">Sound</span></li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 MANYBIRDS</p>
+    </footer>
+
+    <div class="lightbox" id="lightbox">
+        <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close">×</button>
+        <button type="button" class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous image">‹</button>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="">
+        <button type="button" class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next image">›</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -3,415 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MANYBIRDS — Audiovisual Performance Collective</title>
+    <title>MANYBIRDS</title>
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600&family=Sora:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
 </head>
-<body>
-    <!-- Full-page background (birds + orbs + grain) -->
-    <div class="page-bg" aria-hidden="true">
-        <div class="gradient-orb orb-1"></div>
-        <div class="gradient-orb orb-2"></div>
-        <div class="floating-birds">
-            <img src="assets/birds/Birds-3.png" class="floating-bird bird-1" alt="">
-            <img src="assets/birds/Birds-12.png" class="floating-bird bird-2" alt="">
-            <img src="assets/birds/Birds-7.png" class="floating-bird bird-3" alt="">
-            <img src="assets/birds/Birds-19.png" class="floating-bird bird-4" alt="">
-            <img src="assets/birds/Birds-31.png" class="floating-bird bird-5" alt="">
-            <img src="assets/birds/Birds-1.png" class="floating-bird bird-6" alt="">
-            <img src="assets/birds/Birds-5.png" class="floating-bird bird-7" alt="">
-            <img src="assets/birds/Birds-9.png" class="floating-bird bird-8" alt="">
-            <img src="assets/birds/Birds-14.png" class="floating-bird bird-9" alt="">
-            <img src="assets/birds/Birds-18.png" class="floating-bird bird-10" alt="">
-            <img src="assets/birds/Birds-22.png" class="floating-bird bird-11" alt="">
-            <img src="assets/birds/Birds-27.png" class="floating-bird bird-12" alt="">
-            <img src="assets/birds/Birds-33.png" class="floating-bird bird-13" alt="">
-            <img src="assets/birds/Birds-38.png" class="floating-bird bird-14" alt="">
-            <img src="assets/birds/Birds-42.png" class="floating-bird bird-15" alt="">
-        </div>
-        <div class="grain-overlay"></div>
+<body class="home-page">
+    <div class="home-birds" aria-hidden="true">
+        <img class="home-bird bird-1" src="assets/birds/Birds-3.png" alt="">
+        <img class="home-bird bird-2" src="assets/birds/Birds-11.png" alt="">
+        <img class="home-bird bird-3" src="assets/birds/Birds-18.png" alt="">
+        <img class="home-bird bird-4" src="assets/birds/Birds-24.png" alt="">
+        <img class="home-bird bird-5" src="assets/birds/Birds-31.png" alt="">
+        <img class="home-bird bird-6" src="assets/birds/Birds-39.png" alt="">
+        <img class="home-bird bird-7" src="assets/birds/Birds-46.png" alt="">
+        <img class="home-bird bird-8" src="assets/birds/Birds-53.png" alt="">
+        <img class="home-bird bird-9" src="assets/birds/Birds-7.png" alt="">
+        <img class="home-bird bird-10" src="assets/birds/Birds-14.png" alt="">
+        <img class="home-bird bird-11" src="assets/birds/Birds-21.png" alt="">
+        <img class="home-bird bird-12" src="assets/birds/Birds-28.png" alt="">
+        <img class="home-bird bird-13" src="assets/birds/Birds-35.png" alt="">
+        <img class="home-bird bird-14" src="assets/birds/Birds-42.png" alt="">
+        <img class="home-bird bird-15" src="assets/birds/Birds-1.png" alt="">
+        <img class="home-bird bird-16" src="assets/birds/Birds-5.png" alt="">
+        <img class="home-bird bird-17" src="assets/birds/Birds-9.png" alt="">
+        <img class="home-bird bird-18" src="assets/birds/Birds-13.png" alt="">
+        <img class="home-bird bird-19" src="assets/birds/Birds-17.png" alt="">
+        <img class="home-bird bird-20" src="assets/birds/Birds-23.png" alt="">
+        <img class="home-bird bird-21" src="assets/birds/Birds-27.png" alt="">
+        <img class="home-bird bird-22" src="assets/birds/Birds-33.png" alt="">
+        <img class="home-bird bird-23" src="assets/birds/Birds-37.png" alt="">
+        <img class="home-bird bird-24" src="assets/birds/Birds-41.png" alt="">
+        <img class="home-bird bird-25" src="assets/birds/Birds-45.png" alt="">
+        <img class="home-bird bird-26" src="assets/birds/Birds-49.png" alt="">
+        <img class="home-bird bird-27" src="assets/birds/Birds-51.png" alt="">
+        <img class="home-bird bird-28" src="assets/birds/Birds-55.png" alt="">
     </div>
 
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-logo-wrap">
-            <a href="#home" class="nav-logo">MANYBIRDS</a>
-            <a href="#projects" class="nav-back">Back to Projects</a>
-        </div>
-        <div class="nav-links">
-            <a href="#projects">Projects</a>
-            <a href="#about">About</a>
-        </div>
-    </nav>
-
-    <!-- Landing / Home -->
-    <section id="home" class="section section-home">
-        <div class="home-content">
-            <h1 class="home-title">MANYBIRDS</h1>
-            <p class="home-subtitle">audiovisual performance collective</p>
-            <p class="home-ethos">immersive futures · ecological memory · sound & image</p>
-        </div>
-        <div class="scroll-indicator">
-            <span>scroll</span>
-            <div class="scroll-line"></div>
-        </div>
-    </section>
-
-    <!-- Projects Index -->
-    <section id="projects" class="section section-projects">
-        <div class="section-inner">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                <!-- UNDERSKY -->
-                <article class="project-card" data-project="undersky">
-                    <div class="project-card-image">
-                        <div class="project-placeholder-img undersky-bg"></div>
-                    </div>
-                    <div class="project-card-content">
-                        <h3 class="project-title">UNDERSKY</h3>
-                        <div class="project-meta">
-                            <span>2026</span>
-                            <span class="meta-divider">·</span>
-                            <span>Installation & Performance</span>
-                        </div>
-                        <p class="project-tagline">A future-historical reenactment of Earth's flora and fauna, long after we've gone.</p>
-                    </div>
-                </article>
-
-                <!-- Flicker and Gambol -->
-                <article class="project-card" data-project="flicker">
-                    <div class="project-card-image">
-                        <div class="project-placeholder-img flicker-bg"></div>
-                    </div>
-                    <div class="project-card-content">
-                        <h3 class="project-title">Flicker and Gambol</h3>
-                        <div class="project-meta">
-                            <span>2026</span>
-                            <span class="meta-divider">·</span>
-                            <span>Fulldome Film</span>
-                        </div>
-                        <p class="project-tagline">Onwards and upwards. Unmask, unwind, untether.</p>
-                    </div>
-                </article>
-
-                <!-- The Handprint and the Hand -->
-                <article class="project-card" data-project="handprint">
-                    <div class="project-card-image">
-                        <div class="project-placeholder-img handprint-bg"></div>
-                    </div>
-                    <div class="project-card-content">
-                        <h3 class="project-title">The Handprint and the Hand</h3>
-                        <div class="project-meta">
-                            <span>2025</span>
-                            <span class="meta-divider">·</span>
-                            <span>Performance</span>
-                        </div>
-                        <p class="project-tagline">Exploring how AI-driven vision systems capture and erase human presence.</p>
-                    </div>
-                </article>
-
-                <!-- Migration's Only Natural -->
-                <article class="project-card" data-project="migration">
-                    <div class="project-card-image">
-                        <div class="project-placeholder-img migration-bg"></div>
-                    </div>
-                    <div class="project-card-content">
-                        <h3 class="project-title">migration's only natural</h3>
-                        <div class="project-meta">
-                            <span>2024</span>
-                            <span class="meta-divider">·</span>
-                            <span>Album</span>
-                        </div>
-                        <p class="project-tagline">A kingfisher's odyssey from northern coast to southern shore.</p>
-                    </div>
-                </article>
+    <main class="home-main" id="main">
+        <div class="home-landing">
+            <img class="home-logo" src="assets/logo.svg" alt="" decoding="async">
+            <h1 class="home-wordmark">MANYBIRDS</h1>
+            <p class="home-tagline">Audio Visual Collective</p>
+            <div class="home-actions">
+                <a href="projects.html" class="home-box-link">Projects</a>
+                <a href="info.html" class="home-box-link">Info</a>
             </div>
         </div>
-    </section>
-
-    <!-- Project Detail: UNDERSKY -->
-    <section id="project-undersky" class="section section-project-detail">
-        <div class="section-inner">
-            <div class="project-hero">
-                <div class="project-hero-image undersky-bg"></div>
-                <div class="project-hero-overlay"></div>
-                <div class="project-hero-content">
-                    <h1 class="project-detail-title">UNDERSKY</h1>
-                    <div class="project-detail-meta">
-                        <span>Installation & Performance</span>
-                        <span class="meta-divider">·</span>
-                        <span>2025</span>
-                    </div>
-                    <p class="project-detail-tagline">A future-historical reenactment of Earth's flora and fauna, long after we've gone.</p>
-                </div>
-            </div>
-
-            <div class="project-body">
-                <div class="project-description">
-                    <p>UNDERSKY is an immersive installation and performance staging a future-historical reenactment of Earth's flora and fauna long after humanity has departed. Created using public-domain scientific illustrations, the work imagines immersive entertainment as both a memorial to and a mediation of ecological loss. Currently in development.</p>
-                </div>
-
-                <div class="project-details-grid">
-                    <div class="project-detail-block">
-                        <h4>Credits</h4>
-                        <ul class="credits-list">
-                            <li><span class="credit-name">Tara Rose Morris</span><span class="credit-role">Visuals & System Design</span></li>
-                            <li><span class="credit-name">Graham Steinman</span><span class="credit-role">Composition & Sound</span></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="project-gallery">
-                    <h4>Stills</h4>
-                    <div class="gallery-grid">
-                        <div class="gallery-item">
-                            <img src="assets/projects/undersky/still-1.png" alt="UNDERSKY still">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="assets/projects/undersky/still-2.png" alt="UNDERSKY still">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="assets/projects/undersky/still-3.png" alt="UNDERSKY still">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Project Detail: Flicker and Gambol -->
-    <section id="project-flicker" class="section section-project-detail">
-        <div class="section-inner">
-            <div class="project-hero">
-                <div class="project-hero-image flicker-hero"></div>
-                <div class="project-hero-overlay"></div>
-                <div class="project-hero-content">
-                    <h1 class="project-detail-title">Flicker and Gambol</h1>
-                    <div class="project-detail-meta">
-                        <span>Fulldome Film</span>
-                        <span class="meta-divider">·</span>
-                        <span>2025</span>
-                    </div>
-                    <p class="project-detail-tagline">Dance as the sun and the moon go by.</p>
-                </div>
-            </div>
-
-            <div class="project-body">
-                <div class="project-description">
-                    <p>Onwards and upwards. Unmask, unwind, untether. Dance as the sun and the moon go by.</p>
-                </div>
-
-                <div class="project-media">
-                    <h4>Watch</h4>
-                    <div class="media-embed">
-                        <iframe width="100%" height="500" src="https://www.youtube.com/embed/jxUHhZvjl08" title="Flicker and Gambol" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-
-                <div class="project-details-grid">
-                    <div class="project-detail-block">
-                        <h4>Screenings</h4>
-                        <ul class="screenings-list">
-                            <li>Dome Under Film Festival 2026</li>
-                            <li>SATFest 2026</li>
-                        </ul>
-                    </div>
-
-                    <div class="project-detail-block">
-                        <h4>Credits</h4>
-                        <ul class="credits-list">
-                            <li><span class="credit-name">Tara Rose Morris</span><span class="credit-role">Visuals</span></li>
-                            <li><span class="credit-name">Graham Steinman</span><span class="credit-role">Sound</span></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="project-gallery">
-                    <h4>Stills</h4>
-                    <div class="gallery-grid">
-                        <div class="gallery-item">
-                            <img src="assets/projects/flicker/still-1.png" alt="Flicker and Gambol still">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="assets/projects/flicker/still-2.png" alt="Flicker and Gambol still">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="assets/projects/flicker/still-3.png" alt="Flicker and Gambol still">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Project Detail: The Handprint and the Hand -->
-    <section id="project-handprint" class="section section-project-detail">
-        <div class="section-inner">
-            <div class="project-hero">
-                <div class="project-hero-image handprint-hero"></div>
-                <div class="project-hero-overlay"></div>
-                <div class="project-hero-content">
-                    <h1 class="project-detail-title">The Handprint and the Hand</h1>
-                    <div class="project-detail-meta">
-                        <span>Performance</span>
-                        <span class="meta-divider">·</span>
-                        <span>2025</span>
-                    </div>
-                    <p class="project-detail-tagline">Exploring how AI-driven vision systems capture and erase human presence.</p>
-                </div>
-            </div>
-
-            <div class="project-body">
-                <div class="project-description">
-                    <p>The Handprint and the Hand is an interdisciplinary new media dance performance that explores how AI-driven vision systems capture and erase human presence. A dancer performs accompanied by a projected feed of their performance. The feed uses AI-powered motion capture and human driven visuals to produce scenes that display or omit the dancer's body in digital space. The performance questions what is rendered visible, what is discarded, and how technology reframes authorship. Where does meaning reside when human labor is reduced to machine-readable fragments?</p>
-                </div>
-
-                <div class="project-media">
-                    <h4>Watch</h4>
-                    <div class="media-embed">
-                        <iframe width="100%" height="500" src="https://www.youtube.com/embed/ptIcvTcS4Sk" title="The Handprint and the Hand" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-
-                <div class="project-details-grid">
-                    <div class="project-detail-block">
-                        <h4>Credits</h4>
-                        <ul class="credits-list">
-                            <li><span class="credit-name">Tara Rose Morris</span><span class="credit-role">Visuals</span></li>
-                            <li><span class="credit-name">Kin Nguien</span><span class="credit-role">Dance</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Project Detail: Migration's Only Natural -->
-    <section id="project-migration" class="section section-project-detail">
-        <div class="section-inner">
-            <div class="project-hero">
-                <div class="project-hero-image migration-hero"></div>
-                <div class="project-hero-overlay"></div>
-                <div class="project-hero-content">
-                    <h1 class="project-detail-title">migration's only natural</h1>
-                    <div class="project-detail-meta">
-                        <span>Album</span>
-                        <span class="meta-divider">·</span>
-                        <span>2024</span>
-                    </div>
-                    <p class="project-detail-tagline">A kingfisher's odyssey from northern coast to southern shore.</p>
-                </div>
-            </div>
-
-            <div class="project-body">
-                <div class="project-description">
-                    <p>migration's only natural (2024) follows the journey of a kingfisher on its odyssey from northern coast to southern shore.</p>
-                    <p>each landscape it traverses unveils a new sonic world, echoing the rhythms of its passage over land, through air, across—and even beneath—the water, until it reaches its long-awaited destination.</p>
-                </div>
-
-                <div class="project-media">
-                    <h4>Listen</h4>
-                    <div class="media-embed">
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2xjO3QkY3TRan9JeXCdWRE?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div>
-                </div>
-
-                <div class="project-details-grid">
-                    <div class="project-detail-block">
-                        <h4>Credits</h4>
-                        <ul class="credits-list">
-                            <li><span class="credit-name">Graham Steinman</span><span class="credit-role">voice, guitars, synthesizer, percussion, glockenspiel, piano: 1, 2, 3, 4, 5, 6, 7, 8, 9</span></li>
-                            <li><span class="credit-name">Chris Ross</span><span class="credit-role">upright bass, electric bass, voice: 2, 3, 4, 6, 7, 9</span></li>
-                            <li><span class="credit-name">Sean Warren</span><span class="credit-role">drum kit, percussion, sampled percussion: 1, 2, 4, 5, 7</span></li>
-                            <li><span class="credit-name">Arnaud Allary</span><span class="credit-role">tenor saxophone, clarinet, bass clarinet: 4, 6, 8, 9</span></li>
-                            <li><span class="credit-name">Nathan Klassen</span><span class="credit-role">tenor saxophone, flugelhorn: 1, 6, 8, 9</span></li>
-                            <li><span class="credit-name">Eric Dixon</span><span class="credit-role">cello: 1, 2, 9</span></li>
-                            <li><span class="credit-name">Naomi McCarroll-Butler</span><span class="credit-role">flute: 6, 7, 9</span></li>
-                            <li><span class="credit-name">Emil White</span><span class="credit-role">electric bass: 5, 8</span></li>
-                            <li><span class="credit-name">Romina Bravo</span><span class="credit-role">violin: 6, 9</span></li>
-                            <li><span class="credit-name">Brontae Hunter</span><span class="credit-role">voice: 7</span></li>
-                            <li><span class="credit-name">Shawn Fisher</span><span class="credit-role">violin: 9</span></li>
-                            <li><span class="credit-name">Robyn McCann</span><span class="credit-role">voice: 4</span></li>
-                        </ul>
-                        <p style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.95rem; line-height: 1.8;">
-                            All songs written, produced and mixed by Graham Steinman<br><br>
-                            Recorded by Graham Steinman in his home in Montreal, and by Steinman and Daphne Copper at Copper Sound Studio in Guelph, Ontario<br><br>
-                            Mastered by Phillip Shaw Bova at Bova Lab in Ottawa, Ontario<br><br>
-                            Released December 13, 2024
-                        </p>
-                    </div>
-                </div>
-
-                <div class="project-gallery">
-                    <h4>Stills</h4>
-                    <div class="gallery-grid">
-                        <div class="gallery-item">
-                            <img src="assets/projects/migration/still-1.jpg" alt="migration's only natural still">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="assets/projects/migration/still-2.jpg" alt="migration's only natural still">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="assets/projects/migration/still-3.jpg" alt="migration's only natural still">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="section section-about">
-        <div class="section-inner">
-            <h2 class="section-title">About</h2>
-            
-            <div class="about-intro">
-                <p>MANYBIRDS is an audiovisual performance collective based between Toronto and Montreal, founded in 2025 as a vessel for ongoing collaboration between new media artist Tara Rose Morris and musical composer Graham Steinman. The collective explores film, immersive installation, and performance as a site of ecological memory, speculative futures, and sensory entanglement. </p>
-            </div>
-
-            <div class="practice-grid">
-                <div class="practice-block">
-                    <h3>Tara Rose Morris</h3>
-                    <p>Traditional animation inside visual performance systems; traversable three-dimensional collaged landscapes; body misrecognition and ecological estrangement.</p>
-                    <p>Morris has shown works with arts institutions across North America including Gray Area, InterAccess, SXSW, VIFF, Nuit Blanche, and MAPP. She has a BA in Media Studies from Pomona College and a MSc in Fiction & Entertainment from the SCIArc.</p>
-                    <div class="member-links">
-                        <a href="https://www.instagram.com/taramoves" target="_blank">Instagram</a>
-                        <a href="mailto:taramoves@gmail.com">Website</a>
-                    </div>
-                </div>
-                <div class="practice-block">
-                    <h3>Graham Steinman</h3>
-                    <p>Augmented field recordings; hybrid acoustic–synthetic composition; auditory worlds that blur organic and artificial sound.</p>
-                    <p>Steinman has released two EPs and an album, Migrations Only Natural. He has a BA in Music and Anthropology from the University of Guelph, where he received the Norman and Audrey Harley Music Scholarship, the Gloria Guthrie Memorial Music Prize, and the Honours Music Prize. </p>
-                    <div class="member-links">
-                        <a href="https://www.instagram.com/grahamsteinman" target="_blank">Instagram</a>
-                        <a href="https://www.grahamsteinman.com" target="_blank">Website</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="about-availability">
-                <p>Available for festivals, domes, residencies, and commissions.</p>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>© 2025 MANYBIRDS</p>
-    </footer>
-
-    <!-- Lightbox Modal -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" id="lightbox-close">×</button>
-        <button class="lightbox-nav lightbox-prev" id="lightbox-prev">‹</button>
-        <img class="lightbox-img" id="lightbox-img" src="" alt="">
-        <button class="lightbox-nav lightbox-next" id="lightbox-next">›</button>
-    </div>
+    </main>
 
     <script src="script.js"></script>
 </body>
